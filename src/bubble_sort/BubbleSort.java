@@ -3,6 +3,8 @@ package bubble_sort;
 /**
  * @Description 两两比较，第一轮先将最大的数放到最后一个位置，第二轮将第2大的数放到倒数第2个位置，以此类推
  * 平均时间复杂度为O(n的平方)
+ *
+ * 基本不用,太慢
  * @Date 2020/5/28 9:00
  * @Author dengxiaoyu
  */
