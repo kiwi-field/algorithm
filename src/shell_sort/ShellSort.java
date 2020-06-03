@@ -16,7 +16,7 @@ public class ShellSort {
     static void sort(int[] a) {
 
         int h = 1;
-        // h >数组长度3分之1 则不再计算
+        // h >数组长度3分之1 则不再计算 knuth序列
         while (h <= a.length / 3) {
             h += 3 * h + 1;
         }
