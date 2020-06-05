@@ -10,7 +10,8 @@ package merge_sort;
  */
 public class MergeSort {
     public static void main(String[] args) {
-        int[] arr = {1, 4, 7, 8, 3, 6, 9};
+//        int[] arr = {1, 4, 7, 8, 3, 6, 9};
+        int[] arr = {1, 4, 7, 8,9, 2,3, 6, 10};
         sort(arr, 0, arr.length - 1);
         System.out.println("排序后的数组");
         print(arr);
@@ -37,10 +38,10 @@ public class MergeSort {
         int[] tmp = new int[rightBound - leftPoint + 1];
         int mid = rightPoint - 1;
         int i = leftPoint;
-        int j = mid + 1;
+        int j = rightPoint;
         int k = 0;
 
-        while (i <= mid && j < a.length) {
+        while (i <= mid && j <= rightBound) {
             if (a[i] <= a[j]) {
                 tmp[k] = a[i];
                 k++;
