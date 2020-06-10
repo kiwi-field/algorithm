@@ -17,7 +17,7 @@ public class MergeSort {
         print(arr);
     }
 
-    static void sort(int[] a, int left, int right) {
+    public static void sort(int[] a, int left, int right) {
         // 这行不加栈溢出
         if (left == right) return;
         int mid = (left + right) / 2;

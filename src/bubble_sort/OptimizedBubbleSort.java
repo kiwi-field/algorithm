@@ -21,21 +21,21 @@ public class OptimizedBubbleSort {
         print(a);
     }
 
-    static void sort(int[] a) {
+    public static void sort(int[] a) {
         boolean swapped = true;
         for (int i = a.length - 1; i > 0 && swapped; i--) {
             swapped = false;
-            System.out.println("进行第" + (a.length - i) + "趟排序");
+//            System.out.println("进行第" + (a.length - i) + "趟排序");
             for (int j = 0; j < i; j++) {
                 if (a[j] > a[j + 1]) {
                     swap(a, j, j + 1);
                     swapped = true;
                 }
-                System.out.println("第" + (a.length - i) + "趟第" + (j + 1) + "次排序后的结果");
-                print(a);
+//                System.out.println("第" + (a.length - i) + "趟第" + (j + 1) + "次排序后的结果");
+//                print(a);
             }
-            System.out.println("第" + (a.length - i) + "趟排序后的结果");
-            print(a);
+//            System.out.println("第" + (a.length - i) + "趟排序后的结果");
+//            print(a);
         }
     }
 

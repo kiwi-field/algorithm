@@ -1,14 +1,13 @@
-package insert_sort;
+package quick_sort;
 
 /**
- * @Description 插入排序,平均时间复杂度 O(n的平方), 最好时间复杂度O(n)
- *
- * 比如有3张牌 8 J Q,现在要插入一个10，就需要将Q和J向后移动一位，再插入
- * 样本小且基本有序的时候效率比较高
- * @Date 2020/5/29 18:15
+ * @Description 快速排序
+ * 主要思想: 在一堆数中找
+ * @Date 2020/6/10 10:50
  * @Author dengxiaoyu
  */
-public class InsertSort {
+public class QuickSort {
+
     public static void main(String[] args) {
         int[] a = {9, 3, 1, 4, 6, 8, 7, 5, 2};
         sort(a);
@@ -16,14 +15,8 @@ public class InsertSort {
         print(a);
     }
 
-    public static void sort(int[] a) {
-        for (int i = 1; i < a.length; i++) {
-            for (int j = i; j > 0; j--) {
-                if (a[j] < a[j - 1]) {
-                    swap(a, j, j - 1);
-                }
-            }
-        }
+    static void sort(int[] a) {
+
     }
 
     /**
@@ -41,4 +34,6 @@ public class InsertSort {
         }
         System.out.println();
     }
+
+
 }

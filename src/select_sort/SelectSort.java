@@ -14,11 +14,17 @@ public class SelectSort {
     public static void main(String[] args) {
         int[] arr = {5, 2, 8, 1, 3, 7, 4, 6};
         // 第一次循环  5, 2, 8, 1, 3, 7, 4
+        sort(arr);
+
+
+    }
+
+    public static void sort(int[] arr) {
         for (int i1 = 0; i1 < arr.length - 1; i1++) {
-            System.out.println("-----------------");
-            System.out.println("遍历第" + i1 + "次");
-            System.out.println("交换前");
-            print(arr);
+//            System.out.println("-----------------");
+//            System.out.println("遍历第" + i1 + "次");
+//            System.out.println("交换前");
+//            print(arr);
             int minPos = i1;
             //第一次循环 2, 8, 1, 3, 7, 4, 6
             for (int j = i1 + 1; j < arr.length; j++) {
@@ -27,12 +33,10 @@ public class SelectSort {
                 }
             }
             swap(arr, i1, minPos);
-            System.out.println("最小值位置为" + minPos);
-            System.out.println("交换后");
-            print(arr);
+//            System.out.println("最小值位置为" + minPos);
+//            System.out.println("交换后");
+//            print(arr);
         }
-
-
     }
 
     private static void swap(int[] arr, int i, int j) {
