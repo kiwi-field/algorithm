@@ -33,7 +33,6 @@ public class DataChecker {
 //			OptimizedBubbleSort.sort(arr2);
 //			BubbleSort.sort(arr2);
 //			InsertSort.sort(arr2);
-			// 希尔排序不对
 //			ShellSort.sort(arr2);
 //			SelectSort.sort(arr2);
 //			MergeSort.sort(arr2, 0, arr2.length-1);
