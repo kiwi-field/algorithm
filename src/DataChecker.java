@@ -1,27 +1,30 @@
+import quick_sort.QuickSort;
 import shell_sort.ShellSort;
 
 import java.util.Arrays;
 import java.util.Random;
 
 /**
- * ¶ÔÊıÆ÷£¬Ğ£ÑéÅÅĞòËã·¨ÕıÈ·ĞÔ
+ * å¯¹æ•°å™¨ï¼Œæ ¡éªŒæ’åºç®—æ³•æ­£ç¡®æ€§
  */
 public class DataChecker {
 
 	static int[] generateRandomArray() {
 		Random r = new Random();
 
-		int[] arr = new int[100];
+		int[] arr = new int[1000];
 
 		for (int i = 0; i < arr.length; i++)
-			arr[i] = r.nextInt(10000);
+			arr[i] = r.nextInt(1000);
 
 		return arr;
 	}
 
 	static void check() {
+		long start = System.currentTimeMillis();
+		System.out.println("å¼€å§‹æ—¶é—´:"+start);
 		boolean same = true;
-		for(int times = 0; times < 100; times++) {
+		for(int times = 0; times < 1000; times++) {
 			int[] arr = generateRandomArray();
 			int[] arr2 = new int[arr.length];
 			System.arraycopy(arr, 0, arr2, 0, arr.length);
@@ -30,11 +33,11 @@ public class DataChecker {
 //			OptimizedBubbleSort.sort(arr2);
 //			BubbleSort.sort(arr2);
 //			InsertSort.sort(arr2);
-			// Ï£¶ûÅÅĞò²»¶Ô
-			ShellSort.sort(arr2);
+			// å¸Œå°”æ’åºä¸å¯¹
+//			ShellSort.sort(arr2);
 //			SelectSort.sort(arr2);
 //			MergeSort.sort(arr2, 0, arr2.length-1);
-//			QuickSort.sort(arr2, 0, arr2.length-1);
+			QuickSort.sort(arr2, 0, arr2.length-1);
 
 
 			for (int i = 0; i < arr2.length; i++) {
@@ -42,6 +45,9 @@ public class DataChecker {
 			}
 		}
 		System.out.println(same == true ? "right" : "wrong");
+		long end = System.currentTimeMillis();
+		System.out.println("ç»“æŸæ—¶é—´"+end);
+		System.out.println("æ¶ˆè€—æ—¶é—´"+(end - start)+ "æ¯«ç§’");
 
 	}
 

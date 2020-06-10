@@ -6,8 +6,9 @@ package shell_sort;
  * 如果最后面的数想排到最前面，普通插入排序得和前面一个一个数比较才能挪到最前面
  * 而希尔排序不需要一个个比较就能挪到最前面，间隔比较大的时候，挪的次数比较少，间隔比较小的时候，挪的距离又比较小
  * 时间复杂度O(n的1.3次方)
+ * 空间复杂度O(1)
  *
- * 作业1： 修改时间间隔为2分支N，来比较与knuth序列的时间 通过排序前与排序后记录时间
+ * 通过dataChecker实验发现 2分之N 时间为7秒多  knuth序列为6秒多
  * @Date 2020/6/3 10:09
  * @Author dengxiaoyu
  */
@@ -38,6 +39,20 @@ public class ShellSort {
         }
     }
 
+    public static void sortTwoFenOne(int[] a) {
+
+        // 间隔大小为2分之N
+        for (int gap = a.length / 2; gap > 0; gap = gap / 2) {
+            for (int i = gap; i < a.length; i++) {
+                for (int j = i; j > gap - 1; j -= gap) {
+                    if (a[j] < a[j - gap]) {
+                        swap(a, j, j - gap);
+                    }
+                }
+            }
+        }
+    }
+
     /**
      * 交换两个位置的数
      */
@@ -53,4 +68,5 @@ public class ShellSort {
         }
         System.out.println();
     }
+
 }
